@@ -1,0 +1,100 @@
+Assingments:
+1. Access the Chrome Browser
+2. Enter the url : https://money.rediff.com/gainers
+3. Fetch the stock Details:Ras Resorts 
+		Group
+		Prev
+		Current : //td[text()='68.59']
+		% change
+		
+	if stock is available 
+		print the details
+	else 
+		print the stock name is not displayed in Gainers list
+=============================================================
+1. Access the Chrome Browser
+2. Enter the url : https://money.rediff.com/gainers
+3. Fetch the stock Details:Ras Resorts,GRP L,Hind. Zinc 
+		Group
+		Prev
+		Current
+		% change
+		
+	if stock is available 
+		print the details
+	else 
+		print the stock name is not displayed in Gainers list
+==============================================================	
+Try example 1 & 2 ->https://in.investing.com/equities/top-stock-gainers
+	
+1. Access the Chrome Browser
+2. Enter the url : https://money.rediff.com/gainers
+3. Fetch the Current Price for these stock :Ras Resorts,GRP L,Hind. Zinc ....
+4. Store the details of the current price for these stocks 
+		
+	Print the current price for a specific stoc : Ras Resorts
+=================================================================
+
+Xpath Axes Locators:
+https://www.youtube.com/watch?v=Cg1S2SymQfE
+
+============================================================
+1. Develop Calculator class with the following methods 
+
+		addition()
+		subtraction()
+		multiplication()
+		divison()
+	
+	Develop another class to call these methods and perform calculations
+
+2. Develop a program with List,Set,Array,2D Array 
+		Print the values using for loop 
+					in Set - for each loop 
+
+3. Develop a program using wrapper classes 
+			Integer,Double,Float,Character,Long 
+
+4. Develop a program to throw the Exceptions
+		NullPointerException
+		NumberformatException
+		ArithmeticException
+		ArrayIndexOutofBoundsException
+		FileNotFoundException
+		
+5. Develop a class try/catch/finally
+
+6. Develop Random Class 
+
+7. Develop a program to select Date -Dynamically
+========================
+1. Compelte the List,Set,Map example 
+2. Apply the future DAte to select the startDate in the following website
+https://www.skyscanner.co.in/
+click on Depart Textbox 
+fetch the date from Java method 
+and select the date August 02nd
+======================================================================= 
+Generation of Dynamic Data using Random Class in java:
+
+
+
+Select select = new Select(WE);
+select.selectByVisibleText("January");
+int i = rand.nextInt(12);
+select.selectByIndex(i);
+
+Year : 1980+ 2015
+LL : 1980
+UB: 2015
+
+int year = 1980 + rand.nextInt(UB-LB);
+===============================================
+1. Access https://login.yahoo.com/account/
+2. use the random Function and fill the data 
+3. Click on creat account 
+4. Try the same logic multiple times to understand if there any errors.
+============================================================
+
+	
+	
