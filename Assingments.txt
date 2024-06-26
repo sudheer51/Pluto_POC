@@ -1,3 +1,4 @@
+Modify the assingments file
 Assingments:
 1. Access the Chrome Browser
 2. Enter the url : https://money.rediff.com/gainers
