@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5">
+  <test name="Test">
+  <parameter name="modulename" value="Schedule Appointment" />
+  <parameter name="doctor" value="Charlie" />
+    <classes>
+      <class name="org.iit.mmp.patient.tests.ScheduleAppointmentTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
