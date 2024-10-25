@@ -1,0 +1,184 @@
+Github:
+	Source Code REpository
+	Versioning: Commit ID
+	WebBased Application
+	Cloud Environments : dev,qa,stage/pre-prod,prod
+	
+	Environment Strategy
+										Env 	branch 
+				https://dev.github.com/ dev - develop 
+				https://qa.github.com/  qa  - main 
+				https://stage.github.com/ - customer- CAT - stage  
+				https://github.com/ - prod - prod 
+	
+50 features - 50 dev 
+
+	develop - copy the branch - feature_1,feature_2,feature_3 
+			feature_1-> assign to lead developer for review 
+			lead developer review and approve 
+			feature_1 is merged into the develop branch 
+			
+				
+	branch - is a copy 
+	Release Strategy:
+		development  : 5 stories -> dev ->qa -> pre-prod -> prod ->Release 2.0 (Release 1.0 + new Features)
+		support       : 5 bugs    ->   dev -> qa-> pre-prod->prod (Release 1.0)
+				
+	
+	Branching Strategy: develop,master,release,hotfix
+	Pull Request -> Compare two branches and difference of the commit id's 
+	Push,Pull from the local github
+	Collaboration tool
+
+Branches :
+
+	master - 2 commits 
+			>> develop
+			>> fix-1234 2commits
+				one file Login.java 1 commit 
+				
+						+ 3 commits 
+=============================================================================================
+Signup : create an account
+Generate the Token for push /pull : 
+
+emailID
+Token -> https://github.com/settings/tokens
+New personal access token (classic)
+no expirations
+select all permissions
+
+Steps to push your code from Eclipse into Github  for the firt time:
+------------------------------------------------------------------------------------
+ https://total-qa.com/devops-tutorial-1-pushing-code-local-global-repository-github/
+---------------------------------------------------------------------------------
+Scenario 1: Pushing the code into the Github for the first time.
+1. Create a local Git repository.	-> Right click on the project -> Team -> Sharepoject
+2. Create a repository in the Github->https://github.com/sudheer51/Pluto_POC.git
+3. Right click on the project in Eclipse -> Team -> Commit ->
+			Git Staging view -> Add all the files which are required and stage them ->
+							    commit & Push -> git repository , username , password,master -> finish 
+4. Access the repsitory link for the code pushed via Eclispe
+-----------------------------------------------------------------------------------
+ 
+Scenario 2: import the code into the eclipse ->Create a branch from master -> Perform changes ->commit & Push to Github-> create Pull request[compare the differences between two branches] ->Review->Merge into master 
+			
+Scenario 3: Refresh the your_branch with latest master branch changes
+			switch to master/main  
+				>> team -> pull 
+			switch to your_branch
+				-> merge master 
+
+
+Scenario 4: Resolving Conflicts 
+			Conflicts:
+				Resolve the conflicts-Modify the file with required changes 
+				Add to index
+				commit and push
+----------------------------------------------------------------------------------
+Comparison of your branch against master:
+=======================================
+UpArrow -> means commits ahead of master =>commit-> push -> pull request and merge into the master 
+DownArrow-> mean you are behind master ->merge master into your branch 
+
+
+
+ 
+------------------------------------------------------------------------------------
+master -> 5 commits 
+tc_123 -> 3 commits 
+downarrow -> tc_123 is behind master 
+right click -> team =>merge -> master 
+tc_123 -> 5 commits + 1 merge commit 
+------------------------------------
+gitbash commands :
+>>> for help -> git branch -help [to view the help for all the options in a command] 
+git init -> to convert java project / maven project into a git repository 
+git status -> to view the tracked /untracked files 
+git add filename.java -> to track them 
+git commit -m "Message " -> to commit the files 
+git remote add origin https://github.com/sudheer51/gitbashexample.git
+git push -u origin main
+
+git log -> to view all the commit information 
+git pull -> to fetch the latest changes in to the branch [Refresh the branch ]
+
+
+Next Day 
+
+Refresh the master branch -> pulling the latest changes 
+========================================================
+Pre-Requisite: 
+Gitbash to be installed
+Create a Repository in the Github "java_selenium23"
+
+Scenario #1:
+================
+ C:\Users\sudhe\eclipse-workspace\GitRepoElite\JavaFundamentals
+ 
+ windows : backward slash \
+ unix : forward slash /
+ 
+ 
+ gitbash commands :
+>>> for help -> git branch -help [to view the help for all the options in a command] 
+git init -> to convert java project / maven project into a git repository 
+git status -> to view the tracked /untracked files 
+git add filename.java -> to track them 
+git commit -m "Message " -> to commit the files 
+git remote add origin https://github.com/sudheer51/gitbashexample.git
+git push -u origin main
+-------------------------------------------------------------------------------------------
+Scenario#2: import the code into the eclipse ->Create a branch from master -> Perform changes ->commit & Push to Github-> create
+===========
+  518  cd C:/h2k/2023/readme_changes
+  519  git clone https://github.com/sudheer51/java_selenium23
+  520  ls
+  521  ls -al
+  522  cd java_selenium23/
+  523  ls
+  524  ls -al
+  525  clear
+  526  git checkout -b update_readme
+  527  git status
+  528  git add README.md
+  529  git commit -m "modified"
+  530  git push
+  531  git push --set-upstream origin update_readme
+
+----------------------------------------------------------------------------------------------
+Scenario #3 Refresh the branch & #4 Resolve the conflicts 
+ 534  git checkout main
+  535  git log
+  536  git pull
+  537  git log
+  538  clear
+  539  git checkout update_readme
+  540  git merge main
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Modify the file of README.md to resolve the conflicts 
+  541  git status
+  542  git add README.md
+  543  git commit -m "Resolved the conflicts"
+  544  git push
+  
+:wq ->write and quit 
+-------------------------------------------------------------------------------------------------
+
+git stash : will save the changes into the private workspace
+		>> git stash list 
+		>>  git stash pop stash@{0}
+
+git rebase : Mainly moving the changes from one branch into the another branch 
+            This doesnt have track of the changes from which branch the changes are applied
+
+vs 
+
+git merge :
+		  Mainly copies the changes from one branch into another branch 
+		   The changes are tracked as well 
+git reset :
+		It will ignore all the changes done in the branch and rollback to previous commit ID 
+
+git restore :
+		Ignore the changes in the working directory 
+		
