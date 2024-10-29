@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
@@ -51,6 +52,11 @@ public class BaseClass {
 		FileInputStream fis = new FileInputStream(f);
 		prop.load(fis);
 		return prop;
+	}
+	@AfterClass
+	public void closeBrowser()
+	{
+		driver.quit();
 	}
 
 
